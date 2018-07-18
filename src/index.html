@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <%= t.include("partials/_head.html", grunt.data.json) %>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <responsive-child>
+      <main class="interactive">
+        <h2>What they make - comparing the boss and the typical employee</h2>
+        <p class="chatter">
+          A new federal regulation requires companies to report their median employee pay and the ratio between that and the CEO’s total compensation. Not all companies reported the employee number in their most recent year-end results, depending on when their fiscal year ends.
+
+        <table class="pay-table collapsed">
+          <thead>
+            <tr>
+              <th class="portrait">
+              <th class="name" data-sort="sortExec">CEO
+              <th class="company" data-sort="sortCompany">Company
+              <th class="ceo-pay sorted" data-direction="down" data-sort="exec_pay">Total CEO compensation
+              <th class="employee-pay" data-sort="employee_pay">Median employee pay
+              <th class="ratio" data-sort="sortRatio">Ratio
+          <tbody>
+          <tbody>
+            <tr>
+              <td colspan=9>
+                <button class="expand">Show all rows</button>
+        </table>
+      </main>
+    </responsive-child>
+
+    <script>
+window.payData = <%= JSON.stringify(csv.pay) %>;
+    </script>
+
+    <script src="app.js" async></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_analytics.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>
