@@ -41,7 +41,7 @@ var defaultSorts = {
 };
 
 window.payData.forEach(function(row) {
-  row.sortExec = row.exec.toLowerCase();
+  row.sortExec = row.exec.toLowerCase().split(" ").pop();
   row.sortCompany = row.company.toLowerCase();
   row.sortRatio = row.ratio == "n/a" ? 0 : row.ratio.replace(" to 1", "") * 1;
 })
