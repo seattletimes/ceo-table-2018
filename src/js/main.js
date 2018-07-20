@@ -22,7 +22,7 @@ var render = function() {
   <td class="name">${r.exec}
   <td class="company">${r.company}
   <td class="ceo-pay">${format(r.exec_pay)}
-  <td class="employee-pay ${isNumeric(r.employee_pay) ? "" : "non-numeric"}">${format(r.employee_pay)}
+  <td class="employee-pay ${isNumeric(r.employee_pay) ? "" : "non-numeric"}">${format(r.employee_pay)}${r.asterisk}
   <td class="ratio">${r.ratio}
   `).join("");
 };
@@ -44,6 +44,7 @@ window.payData.forEach(function(row) {
   row.sortExec = row.exec.toLowerCase().split(" ").pop();
   row.sortCompany = row.company.toLowerCase();
   row.sortRatio = row.ratio == "n/a" ? 0 : row.ratio.replace(" to 1", "") * 1;
+  row.asterisk = row.asterisk || "";
 })
 
 var onSort = function() {

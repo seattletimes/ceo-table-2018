@@ -1,4 +1,4 @@
-company,exec,exec_pay,employee_pay,ratio,
+company,exec,exec_pay,employee_pay,ratio,asterisk
 Expedia Group,Mark D. Okerstrom,30720457,71696,431 to 1,
 T-Mobile US,John J. Legere,23631206,55739,424 to 1,
 Microsoft,Satya Nadella,20014152,n/a,n/a,
@@ -68,7 +68,7 @@ Aptevo Therapeutics,Marvin L. White,1048403,n/a,n/a,
 FS Bancorp,Joseph C. Adams,987767,n/a,n/a,
 Nautilus,Bruce M. Cazenave,955737,72345,13 to 1,
 Marchex,Ethan A. Caldwell,919280,111462,8 to 1,
-Pope Resources,Thomas M. Ringo,887079,Not disclosed,15 to 1,
+Pope Resources,Thomas M. Ringo,887079,59139,15 to 1,*
 nLIGHT,Scott Keeney,799352,n/a,n/a,
 Radiant Logistics,Bohn H. Crain,747094,n/a,n/a,
 First Financial Northwest,Joseph W. Kiley,711376,73217,10 to 1,
